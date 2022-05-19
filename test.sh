@@ -24,7 +24,7 @@ run_testcase() {
 
         bench_output=$testcase_dir/bench-output.csv
         test_echo "    benchmark $entry: $testcase > $bench_output"
-        hyperfine --show-output "./build.sh run ../../$testcase" --export-csv $bench_output >>$log_file 2>&1
+        hyperfine "./build.sh run ../../$testcase" --export-csv $bench_output >>$log_file 2>&1
     popd >/dev/null
 }
 
