@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 script=$1
 cmd=$2
 . $script
